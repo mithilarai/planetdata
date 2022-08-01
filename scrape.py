@@ -54,7 +54,8 @@ def scrape():
 
                         temp_list.append("")
             planet_data.append(temp_list)
-        browser.find_element("path", '//*[@id="primary_column"]/div[1]/div[2]/div[1]/div/nav/span[2]/a').click()
+        browser.find_element("xpath", '//*[@id="primary_column"]/div[1]/div[2]/div[1]/div/nav/span[2]/a').click()
+        
     with open("grape.csv","w") as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(headers)
